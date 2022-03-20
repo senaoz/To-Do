@@ -1,10 +1,10 @@
+import ToDo from "./Components/ToDo";
 
-function App() {
+export default function App() {
   return (
-    <div className="App prose lg:prose-lg">
-      <h1>Merhaba</h1>
+    <div className="App prose lg:prose-lg dark:prose-invert">
+        <h1>Hi!</h1>
+        <ToDo />
     </div>
   );
 }
-
-export default App;
