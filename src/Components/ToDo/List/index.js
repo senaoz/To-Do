@@ -3,9 +3,6 @@ import React from "react";
 
 export default function List({ todos, updateToDos }) {
 
-    const done = todos.filter(item => item.done === true);
-    const undone = todos.filter(item => item.done === false);
-
     const updateTodoIsComplete = (todoIndex) => {
         updateToDos(
             todos.map((todo, index) =>
@@ -15,6 +12,12 @@ export default function List({ todos, updateToDos }) {
             )
         );
     };
+
+    const completeAll = (todos) => {
+        updateToDos(
+            todos.map((todo) => ({done:true, name:todo.name, deadline:todo.deadline }))
+        );
+    }
 
     const removeTodoItem = (todoIndex) => {
         todos.splice(todoIndex, 1);
@@ -30,7 +33,7 @@ export default function List({ todos, updateToDos }) {
             </section>
 
             { todos.map((todo, index) => (
-                    <section key={index+1} className='flex justify-between items-center'>
+                    <section key={index+1} className='flex justify-between items-center text-white'>
                         <label className="w-7/12 md:w-9/12">
                             <input name="done"
                                    checked={todo.done}
@@ -47,6 +50,7 @@ export default function List({ todos, updateToDos }) {
                     </section>
                 )
             )}
+            <button className="button w-full mt-8" onClick={() => completeAll(todos)}>Complete All 🚀</button>
         </div>
     );
 }

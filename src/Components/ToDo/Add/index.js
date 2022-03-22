@@ -40,7 +40,7 @@ export default function AddToDo({ setToDos, todos }) {
             </div>
 
             <div className="flex justify-end mt-6">
-                <button className="button">Add 🚀</button>
+                <button className="button" type='submit'>Add</button>
             </div>
         </form>
     );
