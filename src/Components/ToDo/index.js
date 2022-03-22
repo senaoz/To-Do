@@ -12,8 +12,8 @@ export default function ToDo() {
 
     return (
         <>
-            <AddToDo setToDos={setToDos} todos={todos}/>
-            <List todos={todos}/>
+            <AddToDo todos={todos} setToDos={setToDos}/>
+            <List todos={todos} updateToDos={setToDos}/>
         </>
     );
 }
