@@ -33,7 +33,7 @@ export default function List({ todos, updateToDos }) {
             </section>
 
             { todos.map((todo, index) => (
-                    <section key={index+1} className='flex justify-between items-center text-white'>
+                    <section key={index+1} className='flex justify-between items-center text-black dark:text-white'>
                         <label className="w-7/12 md:w-9/12">
                             <input name="done"
                                    checked={todo.done}
