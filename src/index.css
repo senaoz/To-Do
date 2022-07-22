@@ -5,7 +5,7 @@
 .prose { min-width: 100%; }
 
 html {
-    @apply bg-cover bg-center bg-[url('/public/bg.jpg')] min-h-screen;
+    @apply bg-cover bg-center bg-[url('/public/bg.webp')] min-h-screen;
 }
 
 body {
